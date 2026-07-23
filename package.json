@@ -1,0 +1,25 @@
+{
+  "name": "@trivoxchat/widget",
+  "version": "1.0.0",
+  "description": "TrivoxChat Web Widget — Vanilla JS + Web Components",
+  "main": "dist/widget.esm.js",
+  "scripts": {
+    "build": "cross-env BACKEND_URL=http://localhost:4000 node node_modules/rollup/dist/bin/rollup -c rollup.config.js",
+    "dev": "cross-env BACKEND_URL=http://localhost:4000 node node_modules/rollup/dist/bin/rollup -c rollup.config.js --watch",
+    "build:prod": "cross-env NODE_ENV=production node node_modules/rollup/dist/bin/rollup -c rollup.config.js",
+    "mock": "node demo/mock-server.cjs",
+    "demo": "cross-env BACKEND_URL=http://localhost:4000 node node_modules/rollup/dist/bin/rollup -c rollup.config.js --watch"
+  },
+  "type": "module",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@rollup/plugin-replace": "^5.0.5",
+    "@rollup/plugin-terser": "^0.4.4",
+    "cross-env": "^10.1.0",
+    "live-server": "^1.2.2",
+    "postcss": "^8.4.32",
+    "rollup": "^4.9.0",
+    "rollup-plugin-postcss": "^4.0.2"
+  }
+}

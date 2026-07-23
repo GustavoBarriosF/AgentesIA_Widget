@@ -1,0 +1,90 @@
+/* ── Variables CSS (sobreescritas por branding del workspace) ── */
+:host {
+  --tw-color-primary: #4F46E5;
+  --tw-color-primary-dark: #4338CA;
+  --tw-color-bg: #ffffff;
+  --tw-color-bg-secondary: #F9FAFB;
+  --tw-color-surface: #ffffff;
+  --tw-color-border: #E5E7EB;
+  --tw-color-text: #111827;
+  --tw-color-text-muted: #6B7280;
+  --tw-color-text-inverse: #ffffff;
+  --tw-color-bubble-visitor: var(--tw-color-primary);
+  --tw-color-bubble-visitor-text: #ffffff;
+  --tw-color-bubble-agent: #F3F4F6;
+  --tw-color-bubble-agent-text: #111827;
+  --tw-radius: 16px;
+  --tw-radius-sm: 8px;
+  --tw-shadow: 0 20px 60px rgba(0,0,0,0.15);
+  --tw-shadow-btn: 0 4px 20px rgba(0,0,0,0.2);
+  --tw-z-index: 2147483647;
+  --tw-font: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --tw-transition: all 0.2s ease;
+  --tw-panel-width: 380px;
+  --tw-panel-height: 580px;
+  --tw-btn-size: 60px;
+  --tw-offset-x: 20px;
+  --tw-offset-y: 20px;
+
+  /* Dark mode */
+  --tw-dm-bg: #1F2937;
+  --tw-dm-surface: #111827;
+  --tw-dm-border: #374151;
+  --tw-dm-text: #F9FAFB;
+  --tw-dm-text-muted: #9CA3AF;
+  --tw-dm-bubble-agent: #374151;
+  --tw-dm-bubble-agent-text: #F9FAFB;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:host([dark]) {
+  --tw-color-bg: var(--tw-dm-bg);
+  --tw-color-bg-secondary: var(--tw-dm-surface);
+  --tw-color-surface: var(--tw-dm-surface);
+  --tw-color-border: var(--tw-dm-border);
+  --tw-color-text: var(--tw-dm-text);
+  --tw-color-text-muted: var(--tw-dm-text-muted);
+  --tw-color-bubble-agent: var(--tw-dm-bubble-agent);
+  --tw-color-bubble-agent-text: var(--tw-dm-bubble-agent-text);
+}
+
+@keyframes tw-slideUp {
+  from { opacity: 0; transform: translateY(20px) scale(0.95); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes tw-fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes tw-scaleIn {
+  from { opacity: 0; transform: scale(0); }
+  to   { opacity: 1; transform: scale(1); }
+}
+
+@keyframes tw-pulse {
+  0%, 100% { transform: scale(1); }
+  50%       { transform: scale(1.15); }
+}
+
+@keyframes tw-dots {
+  0%, 80%, 100% { opacity: 0.3; transform: scale(0.6); }
+  40%            { opacity: 1;   transform: scale(1); }
+}
+
+@keyframes tw-spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes tw-badgePulse {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(239,68,68,0.5); }
+  50%      { box-shadow: 0 0 0 6px rgba(239,68,68,0); }
+}
